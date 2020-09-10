@@ -1,4 +1,4 @@
-# Ent-App-Group-Project
+# Ent-App-Group-Project Design Document
 
 # Introduction
 
