@@ -98,4 +98,4 @@
   Link to Trello Scrum Board - https://trello.com/b/r6mKbhxn/ent-app-development-board 
   
   # Group Meeting Time
-  
+  Link - https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTRmMzY1OTgtMzc4OS00MjU4LWEyYTctYWU3ZWNiZTFlYWRl%40thread.v2/0?context=%7b%22Tid%22%3a%22f5222e6c-5fc6-48eb-8f03-73db18203b63%22%2c%22Oid%22%3a%22bea01abb-7c6e-4cc5-9775-1207ce219cc3%22%7d
