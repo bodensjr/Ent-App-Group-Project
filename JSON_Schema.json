@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Voluntier",
+    "description": "An online web application that allows people to search for available voluntering.",
+    "type": "object",
+    "properties": {
+        "Company_id": {
+            "description": "Company identifier",
+            "type": "integer"
+        },
+        "Company_name": {
+            "description": "Company name",
+            "type": "string"
+        },
+		"description": {
+            "description": "Type of Voluntering",
+            "type": "string"
+        },
+		"Duration": {
+            "description": "Duration Needed for",
+            "type": "integer"
+        },
+		"Contact_Info": {
+            "description": "Contact_info",
+            "type": "string"
+        },
+		"Email_In_Charge": {
+            "description": "Email of the person in Charge",
+            "type": "string"
+        }
+    },
+    "required": ["Company_id", "Company_name","description", "Duration","Contact_Info","Email_In_Charge"]
+}
