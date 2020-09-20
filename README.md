@@ -84,7 +84,7 @@
   # Class Diagram
   (Attached in github document)
   # JSON Schema
-  
+  (Attached in github document)
   # Scrum Roles
   Daniel Le- Product Owner 
 
