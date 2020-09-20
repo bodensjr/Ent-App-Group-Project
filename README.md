@@ -82,9 +82,9 @@
   - Then [user gets a notification]
   
   # Class Diagram
-  (Attached in github document)
+  (Attached in github document)- https://github.com/bodensjr/Ent-App-Group-Project/blob/master/Class%20Diagram.mdj
   # JSON Schema
-  (Attached in github document)
+  (Attached in github document)- https://github.com/bodensjr/Ent-App-Group-Project/blob/master/JSON_Schema.json
   # Scrum Roles
   Daniel Le- Product Owner 
 
