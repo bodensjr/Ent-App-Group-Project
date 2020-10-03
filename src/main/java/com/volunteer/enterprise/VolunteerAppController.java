@@ -1,5 +1,6 @@
 package com.volunteer.enterprise;
 import dto.Volunteer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class VolunteerAppController {
 
-
-
+ @Autowired
+ VolunteerService volunteerService;
 
 
     @RequestMapping("/")
@@ -44,11 +45,11 @@ model.addAttribute(volunteer);
 
 
 
-    /*
+
 
     @PostMapping(value="/volunteer", consumes = "application/json", produces = "application/json")
     @ResponseBody
-    public Volunteer createVolunteer(@ResponseBody Volunteer volunteer){
+    public Volunteer createVolunteer(@RequestBody Volunteer volunteer){
         Volunteer newVolunteer = null;
         try {
             newVolunteer = volunteerService.save(volunteer);
@@ -58,18 +59,18 @@ model.addAttribute(volunteer);
         return  newVolunteer;
     }
 
-    */
 
 
 
 
 
-    /*
+
+
 
     @DeleteMapping("/volunteer/{id/}")
     public ResponseEntity deleteVolunteer(@PathVariable("id") String id){
         try{
-            volunteerServie.delete(Integer.parseInt(id));
+            volunteerService.delete(Integer.parseInt(id));
             return new ResponseEntity(HttpStatus.OK);
 
         }catch (Exception e){
@@ -79,6 +80,6 @@ model.addAttribute(volunteer);
     }
 
 
-*/
+
 
 }

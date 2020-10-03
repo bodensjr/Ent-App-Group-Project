@@ -8,4 +8,8 @@ import java.util.List;
 @Component
 public interface VolunteerService {
 
+    void save(VolunteerService volunteerService);
+
+
+    List<VolunteerService> fetchAll();
 }
