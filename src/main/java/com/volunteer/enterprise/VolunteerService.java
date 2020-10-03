@@ -1,3 +1,5 @@
+package com.volunteer.enterprise;
+
 import org.springframework.stereotype.Component;
 
 
