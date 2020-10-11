@@ -15,18 +15,14 @@ public class VolunteerAppController {
  VolunteerService volunteerService;
 
 
-    @RequestMapping("/")
-    public String index(Model model){
-
-Volunteer volunteer = new Volunteer();
-
-volunteer.setVolunteerID(1);
-volunteer.setVolunteerUser("Iron Man");
-volunteer.setVolunteerPass("1234");
-
-model.addAttribute(volunteer);
-        return "Index";
-
+ @RequestMapping("/")
+ public String index(Model model){
+     Volunteer volunteer = new Volunteer();
+     volunteer.setVolunteerID(1);
+     volunteer.setVolunteerUser("Iron Man");
+     volunteer.setVolunteerPass("1234");
+     model.addAttribute(volunteer);
+     return "Index";
     }
 
 
@@ -50,13 +46,12 @@ model.addAttribute(volunteer);
     @PostMapping(value="/volunteer", consumes = "application/json", produces = "application/json")
     @ResponseBody
     public Volunteer createVolunteer(@RequestBody Volunteer volunteer){
-        Volunteer newVolunteer = null;
         try {
-            newVolunteer = volunteerService.save(volunteer);
+           volunteerService.save(volunteer);
         }catch (Exception e){
             //TODO later
         }
-        return  newVolunteer;
+        return volunteer;
     }
 
 
