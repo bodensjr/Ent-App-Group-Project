@@ -10,7 +10,8 @@ import java.util.List;
 @Repository
 public class VolunteerServiceDAOStub implements VolunteerServiceDAO {
 
-    List<Volunteer> allVolunteers = new ArrayList<Volunteer>();
+    //List<Volunteer> allVolunteers = new ArrayList<Volunteer>();
+    Map<Integer, Volunteer> allVolunteers = new HashMap<>();
 
     @Override
     public Volunteer save(Volunteer volunteer) throws Exception {
