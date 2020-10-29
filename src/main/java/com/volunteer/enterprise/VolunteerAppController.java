@@ -33,7 +33,7 @@ public class VolunteerAppController {
 
         // Add newly created favorite to model so it can be displayed
         model.addAttribute(volunteer);
-        return "start";
+        return "Index";
 
     }
 
@@ -55,7 +55,7 @@ public class VolunteerAppController {
         }
         //Add newly created volunteer to model so it can be displayed
         model.addAttribute(volunteer);
-        return "start";
+        return "Index";
     }
 
     /**
