@@ -14,6 +14,7 @@ import java.util.Map;
 public class VolunteerServiceDAOStub implements IVolunteerServiceDAO {
 
     Map<Integer, Volunteer> allVolunteers = new HashMap<>();
+    Map<Integer, Company> allCompanies = new HashMap<>();
 
     @Override
     public Volunteer save(Volunteer volunteer) throws Exception {
@@ -35,5 +36,27 @@ public class VolunteerServiceDAOStub implements IVolunteerServiceDAO {
     @Override
     public void delete(int id) {
         allVolunteers.remove(id);
+    }
+    
+        @Override
+    public Company save(Volunteer company) throws Exception {
+        allCompanies.put(company.getCompanyID(),company);
+        return company;
+    }
+    @Override
+    public List<Company> fetchAll() {
+        HashMap<Object, Object> allCompany;
+        List<Company> returnCompanies = new ArrayList(allCompanies.values());
+        return returnCompanies;
+    }
+
+    @Override
+    public Company fetch(int id) {
+        return null;
+    }
+
+    @Override
+    public void delete(int id) {
+        allCompanies.remove(id);
     }
 }
