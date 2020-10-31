@@ -10,3 +10,4 @@ class Volunteer {
     private String volunteerPass;
     public String testField;
 }
+

@@ -1,4 +1,5 @@
 package com.volunteer.enterprise;
+import com.volunteer.enterprise.dto.Company;
 import com.volunteer.enterprise.dto.Volunteer;
 import com.volunteer.enterprise.service.IVolunteerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +34,39 @@ public class VolunteerAppController {
 
         // Add newly created favorite to model so it can be displayed
         model.addAttribute(volunteer);
-        return "start";
+        return "Index";
 
     }
+
+
+
+
+    /**
+     *RequestMapping for root (/) endpoint
+     * Create a Company company object then display company form page
+     * @return company form page
+     */
+
+    @RequestMapping("/company")
+    public String company(Model model){
+
+        Company company = new Company();
+        company.setCompanyEmail("vertex@gmail.com");
+        company.setCompanyPass("Man");
+        company.setCompanyID(1);
+        model.addAttribute(company);
+
+        // Add newly created favorite to model so it can be displayed
+        model.addAttribute(company);
+        return "company";
+
+    }
+
+
+
+
+
+
 
     /**
      * RequestMapping for /saveVolunteer endpoint
