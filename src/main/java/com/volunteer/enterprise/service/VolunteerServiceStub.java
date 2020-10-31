@@ -9,9 +9,9 @@ import java.util.List;
 
 
 @Service
-public class VolunteerServiceStub implements IVolunteerServiceDAO {
+public class VolunteerServiceStub implements IVolunteerService {
     @Autowired
-    private IVolunteerServiceDAO volunteerDAO;
+    private IVolunteerService volunteerService;
 
     public VolunteerServiceStub(){
 
@@ -35,5 +35,10 @@ public class VolunteerServiceStub implements IVolunteerServiceDAO {
     @Override
     public void delete(int id) {
 
+    }
+
+    @Override
+    public Volunteer fetchById(int id) {
+        return null;
     }
 }

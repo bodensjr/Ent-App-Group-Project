@@ -4,11 +4,8 @@ import com.volunteer.enterprise.dto.Volunteer;
 import java.util.List;
 
 public interface IVolunteerService {
-    /**
-     *
-     * @param volunteer
-     * @return
-     */
+
+    Volunteer fetch(int id);
 
     void delete(int parseInt) throws Exception;
 
