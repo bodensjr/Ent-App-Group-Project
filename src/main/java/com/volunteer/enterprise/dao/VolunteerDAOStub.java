@@ -10,7 +10,7 @@ import java.util.Map;
 
 
 @Repository
-public class VolunteerServiceDAOStub implements IVolunteerServiceDAO {
+public class VolunteerDAOStub implements IVolunteerDAO {
 
     Map<Integer, Volunteer> allVolunteers = new HashMap<>();
 
