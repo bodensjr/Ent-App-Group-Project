@@ -46,7 +46,7 @@ public class VolunteerAppController {
      *
      * @return company form page
      */
-    @RequestMapping("/company")
+    @GetMapping("/company")
     public String company(Model model){
         Company company = new Company();
         company.setCompanyEmail("vertex@gmail.com");
