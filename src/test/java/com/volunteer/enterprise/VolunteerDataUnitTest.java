@@ -5,6 +5,7 @@ import com.volunteer.enterprise.service.IVolunteerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -32,7 +33,7 @@ class VolunteerDataUnitTest{
     }
 
     @Test
-    void fetchCompanyID_returnsResurgentForID86452(){
+    void fetchVolunteerID_returnsJonForID86452(){
         givenVolunteerDataAreAvailable();
         whenSearchVolunteerWithID86452();
         thenReturnVolunteerJonForID86452();
@@ -56,7 +57,6 @@ class VolunteerDataUnitTest{
     void thenReturnVolunteerJonForID86452(){
         String volunteerName = volunteer.getVolunteerUser();
         assertEquals("Jon Snow", volunteerName);
-
     }
 
 
