@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class VolunteerServiceStub implements IVolunteerService {
     @Autowired
-    private IVolunteerService volunteerService;
+    private IVolunteerServiceDAO volunteerServiceDAO;
 
     public VolunteerServiceStub(){
 
@@ -19,7 +19,7 @@ public class VolunteerServiceStub implements IVolunteerService {
 
     @Override
     public Volunteer save(Volunteer volunteer) throws Exception {
-        return null;
+        return volunteerServiceDAO.save(volunteer);
     }
 
     @Override
@@ -34,11 +34,12 @@ public class VolunteerServiceStub implements IVolunteerService {
 
     @Override
     public void delete(int id) {
-
+        volunteerServiceDAO.delete(id);
     }
 
     @Override
     public Volunteer fetchById(int id) {
-        return null;
+        Volunteer foundVolunteer = volunteerServiceDAO.fetch(id);
+        return foundVolunteer;
     }
 }
