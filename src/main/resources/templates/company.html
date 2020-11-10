@@ -1,51 +1,46 @@
 <!DOCTYPE html>
-<html xml:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en-US">
 <head>
-  <link rel="stylesheet" href="index.css">
+  <title>Voluntier</title>
+  <link rel="stylesheet" th:href="@{css/Index.css}">
+
   <script>
     function openForm() {
       document.getElementById("myForm1").style.display = "block";
+      document.getElementById("signUpButton").style.display = "none"
     }
 
     function closeForm() {
-      document.getElementById("myForm").style.display = "none";
+      document.getElementById("myForm1").style.display = "none";
+      document.getElementById("signUpButton").style.display = "block"
     }
   </script>
 </head>
+
 <body>
 <div class="content">
   <header>
-    <img src="images.png" alt="Logo">
-
+    <img th:src="@{/images/images.png}" alt="Logo">
   </header>
 
-
   <div class="login">
-
-
-
-    <!--/*@thymesVar id="volunteer" type=""*/-->
-    <p th:text="${company}">
-
-
+    <p th:text="${company}"></p>
 
     <div class="form-popup" id="myForm1">
-      <form action="#" th:action="@{/saveVolunteer}" th:object="${company}"method="GET" class="form-container">
+      <form action="#" th:action="@{/saveVolunteer}" th:object="${company}" method="GET" class="form-container">
+        <label for="cemail"><b>Company Email</b></label>
+        <input type="text" placeholder="Enter Email" name="cemail" id="cemail" th:field="*{companyEmail}" required>
 
-        <label for="email"><b>Company Email</b></label>
-        <input type="text" placeholder="Enter Email" name="cemail" th:field="*{companyEmail}" required>
-
-        <label for="psw"><b>Company Password</b></label>
-        <input type="password" placeholder="Enter Password" name="cpsw" th:field="*{companyPass}" required>
+        <label for="cpsw"><b>Company Password</b></label>
+        <input type="password" placeholder="Enter Password" name="cpsw" id="cpsw" th:field="*{companyPass}" required>
 
         <button type="submit" class="btn">Save</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
     </div>
 
-
-
-
+    <button class="open-button" onclick="openForm()" style="display:none;" id="signUpButton">Sign Up</button>
+  </div>
 
 </div>
 </body>

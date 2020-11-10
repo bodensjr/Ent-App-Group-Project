@@ -4,7 +4,7 @@ import com.volunteer.enterprise.dto.Volunteer;
 import java.util.List;
 
 
-public interface IVolunteerServiceDAO {
+public interface IVolunteerDAO {
     Volunteer save(Volunteer volunteer) throws Exception;
 
     List<Volunteer> fetchAll();

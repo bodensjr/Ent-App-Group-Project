@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html xml:th="http://www.tymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en-US">
 <head>
-  <link rel="stylesheet" href="index.css">
+  <title>Voluntier</title>
+  <link rel="stylesheet" href="@{css/Index.css}">
+
   <script>
     function openForm() {
       document.getElementById("myForm1").style.display = "block";
@@ -15,26 +17,21 @@
 <body>
 <div class="content">
   <header>
-    <img src="images.png" alt="Logo">
+    <img src="../static/images/images.png" alt="Logo">
 
   </header>
   <div class="tab">
-    <button><a href="index.html">About this App</a></button>
+    <button><a href="/">About this App</a></button>
     <button><a href="#">Account</a></button>
     <button><a href="#">Password</a></button>
-    
+
     <button><a href="help.html">Help</a></button>
     <button><a href="#">Apply</a></button>
     <button><a href="post.html">Create/Post</a></button>
 
   </div>
 
-  
-
-    <p th:text="${volunteer}">
-    
-  
-
+  <p th:text="${volunteer}">
 
 </div>
 </body>

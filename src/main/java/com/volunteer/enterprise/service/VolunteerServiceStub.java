@@ -1,6 +1,6 @@
 package com.volunteer.enterprise.service;
 
-import com.volunteer.enterprise.dao.IVolunteerServiceDAO;
+import com.volunteer.enterprise.dao.IVolunteerDAO;
 import com.volunteer.enterprise.dto.Volunteer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class VolunteerServiceStub implements IVolunteerService {
     @Autowired
-    private IVolunteerService volunteerService;
+    private IVolunteerDAO volunteerDAO;
 
     public VolunteerServiceStub(){
 
@@ -19,26 +19,22 @@ public class VolunteerServiceStub implements IVolunteerService {
 
     @Override
     public Volunteer save(Volunteer volunteer) throws Exception {
-        return null;
+        return volunteerDAO.save(volunteer);
     }
 
     @Override
     public List<Volunteer> fetchAll() {
-        return null;
-    }
-
-    @Override
-    public Volunteer fetch(int id) {
-        return null;
+        return volunteerDAO.fetchAll();
     }
 
     @Override
     public void delete(int id) {
-
+        volunteerDAO.delete(id);
     }
 
     @Override
     public Volunteer fetchById(int id) {
-        return null;
+        Volunteer foundVolunteer = volunteerDAO.fetch(id);
+        return foundVolunteer;
     }
 }
