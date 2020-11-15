@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/Index.css}">
     <title>Volunteer</title>
 </head>
 <body>
+    <div class="content">
+  <header>
+    <img th:src="@{/images/images.png}" alt="Logo">
+  </header>
+
+  <div class="tab">
+    <button><a href="/">About this App</a></button>
+    <button><a href="#">Account</a></button>
+    <button><a href="#">Password</a></button>
+
+    <button><a href="help">Help</a></button>
+    <button><a href="#">Apply</a></button>
+    <button><a href="post">Create/Post</a></button>
+  </div>
+
 Welcome to the Volunteer App - Post.html
 </body>
 </html>
