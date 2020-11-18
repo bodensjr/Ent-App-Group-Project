@@ -41,10 +41,10 @@
     <div class="form-popup" id="myForm1">
       <form action="#" th:action="@{/saveVolunteer}" th:object="${volunteer}" method="GET" class="form-container">
 
-        <label for="email1"><b>Email</b></label>
+        <label for="email1"><strong>Email</strong></label>
         <input type="text" placeholder="Enter Email" name="email1" id="email1" th:field="*{volunteerEmail}" required>
 
-        <label for="psw1"><b>Password</b></label>
+        <label for="psw1"><strong>Password</strong></label>
         <input type="password" placeholder="Enter Password" name="psw1" id="psw1" th:field="*{volunteerPass}" required>
 
         <button type="submit" class="btn">Login</button>
@@ -57,16 +57,16 @@
     <div class="form-popup" id="myForm2">
       <form action="/action_page.php" class="form-container" th:object="${volunteer}">
 
-        <label for="email3"><b>Email</b></label>
+        <label for="email3"><strong>Email</strong></label>
         <input type="text" placeholder="Enter Email" name="email3" id="email3" th:field="*{volunteerEmail}" required>
 
-        <label for="email4"><b>Username</b></label>
+        <label for="email4"><strong>Username</strong></label>
         <input type="text" placeholder="Enter Email" name="email4" id="email4" th:field="*{volunteerUser}" required>
 
-        <label for="psw2"><b>Password</b></label>
+        <label for="psw2"><strong>Password</strong></label>
         <input type="password" placeholder="Enter Password" name="psw2" id="psw2" th:field="*{volunteerPass}" required>
 
-        <label for="psw3"><b>Re-enter Password</b></label>
+        <label for="psw3"><strong>Re-enter Password</strong></label>
         <input type="password" placeholder="Enter Password" name="psw3" id="psw3" th:field="*{volunteerPass}" required>
 
         <button type="submit" class="btn" value="0">Create Account</button>
