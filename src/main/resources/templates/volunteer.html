@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en-US">
+<head>
+  <title>Voluntier</title>
+  <link rel="stylesheet" th:href="@{css/Index.css}">
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm1").style.display = "block";
+      document.getElementById("signUpButton").style.display = "none"
+    }
+
+    function closeForm() {
+      document.getElementById("myForm1").style.display = "none";
+      document.getElementById("signUpButton").style.display = "block"
+    }
+  </script>
+</head>
+
+<body>
+<div class="content">
+  <header>
+    <img th:src="@{/images/images.png}" alt="Logo">
+  </header>
+  
+    <div class="tab">
+    <button><a href="/">About this App</a></button>
+    <button><a href="#">Account</a></button>
+    <button><a href="#">Password</a></button>
+
+    <button><a href="help">Help</a></button>
+    <button><a href="post">Create/Post</a></button>
+  </div>
+
+
+  <div class="login">
+    <p th:text="${company}"></p>
+
+    <div class="form-popup" id="myForm1">
+      <form action="#" th:action="@{/saveVolunteer}" th:object="${company}" method="GET" class="form-container">
+        <label for="cemail"><b>Company Email</b></label>
+        <input type="text" placeholder="Enter Email" name="cemail" id="cemail" th:field="*{companyEmail}" required>
+
+        <label for="cpsw"><b>Company Password</b></label>
+        <input type="password" placeholder="Enter Password" name="cpsw" id="cpsw" th:field="*{companyPass}" required>
+
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <button class="open-button" onclick="openForm()" style="display:none;" id="signUpButton">Sign Up</button>
+  </div>
+
+</div>
+</body>
+</html>
+
