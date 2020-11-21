@@ -33,23 +33,30 @@
   </div>
 
 
-  <div class="login">
+  <div class="information">
     <p th:text="${company}"></p>
 
     <div class="form-popup" id="myForm1">
-      <form action="#" th:action="@{/saveVolunteer}" th:object="${company}" method="GET" class="form-container">
-        <label for="cemail"><b>Company Email</b></label>
-        <input type="text" placeholder="Enter Email" name="cemail" id="cemail" th:field="*{companyEmail}" required>
+      <form action="#" th:action="@{/saveCompany}" th:object="${company}" method="GET" class="form-container">
+        <label for="companyName"><b>Company Name</b></label>
+        <input type="text" placeholder="Enter Name of Your Company" name="companyName" id="companyName" th:field="*{companyName}" required>
 
-        <label for="cpsw"><b>Company Password</b></label>
-        <input type="password" placeholder="Enter Password" name="cpsw" id="cpsw" th:field="*{companyPass}" required>
+        <label for="companyLocation"><b>Company Location</b></label>
+        <input type="text" placeholder="Enter Company Location" name="companyLocation" id="companyLocation" th:field="*{companyLocation}" required>
+        
+        <label for="companyDesc"><b>Company Description</b></label>
+        <input type="text" placeholder="Enter Description Of The Company" name="companyDesc" id="companyDesc" th:field="*{companyDesc}" required>
+        
+        <label for="companyPhone"><b>Company Phone Number</b></label>
+        <input type="text" placeholder="Enter Phone Number Of The Company" name="companyPhone" id="companyPhone" th:field="*{companyPhone}" required>
+        
+        <label for="companyEmail"><b>Company Email</b></label>
+        <input type="text" placeholder="Enter Email Address Of The Company" name="companyEmail" id="companyEmail" th:field="*{companyEmail}" required>
 
-        <button type="submit" class="btn">Save</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn">Post</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
       </form>
     </div>
-
-    <button class="open-button" onclick="openForm()" style="display:none;" id="signUpButton">Sign Up</button>
   </div>
 
 </div>
