@@ -37,9 +37,9 @@
     <p th:text="${company}"></p>
 
     <div class="form-popup" id="myForm1">
-      <form action="#" th:action="@{/saveCompany}" th:object="${company}" method="GET" class="form-container">
-        <label for="companyName"><b>Company Name</b></label>
-        <input type="text" placeholder="Enter Name of Your Company" name="companyName" id="companyName" th:field="*{companyName}" required>
+      <form action="#" th:action="@{/saveApplicant}" th:object="${applicant}" method="GET" class="form-container">
+        <label for="applicantName"><b>Volunteer Name</b></label>
+        <input type="text" placeholder="Enter Your Name" name="applicantName" id="applicantName" th:field="*{applicantName}" required>
 
         <label for="companyLocation"><b>Company Location</b></label>
         <input type="text" placeholder="Enter Company Location" name="companyLocation" id="companyLocation" th:field="*{companyLocation}" required>
