@@ -9,7 +9,7 @@ public @Data class Applicant {
     private String applicantPass;
 
     public String toString() {
-        return "Company - " +
+        return "Applicant - " +
                 " ID: " + applicantID +
                 " Email: " + applicantEmail +
                 " User: " + applicantUser +
