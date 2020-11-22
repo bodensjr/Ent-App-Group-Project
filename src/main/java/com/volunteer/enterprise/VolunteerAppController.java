@@ -1,8 +1,10 @@
 package com.volunteer.enterprise;
 import com.volunteer.enterprise.dto.Company;
+import com.volunteer.enterprise.dto.Applicant;
 import com.volunteer.enterprise.dto.Volunteer;
 import com.volunteer.enterprise.service.ICompanyService;
 import com.volunteer.enterprise.service.IVolunteerService;
+import com.volunteer.enterprise.service.IApplicantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.http.HttpStatus;
