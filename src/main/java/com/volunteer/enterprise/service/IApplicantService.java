@@ -1,15 +1,15 @@
 package com.volunteer.enterprise.service;
 
-import com.volunteer.enterprise.dto.Company;
+import com.volunteer.enterprise.dto.Applicant;
 
 import java.util.List;
 
-public interface ICompanyService {
+public interface IApplicantService {
     void delete(int id) throws Exception;
 
-    Company fetchById(int id);
+    Applicant fetchById(int id);
 
-    List<Company> fetchAll();
+    List<Applicant> fetchAll();
 
-    Company save(Company company) throws Exception;
+    Applicant save(Applicant applicant) throws Exception;
 }
