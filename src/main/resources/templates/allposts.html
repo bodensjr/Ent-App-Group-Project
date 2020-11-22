@@ -32,55 +32,16 @@
     <button><a href="help">Help</a></button>
     <button><a href="post">Create/Post</a></button>
   </div>
-
-  <div class="login">
-    <button class="open-button" onclick="openForm()">Log In</button>
-    <p th:text="${volunteer}"></p>
-
-    <div class="form-popup" id="myForm1">
-      <form action="#" th:action="@{/saveVolunteer}" th:object="${volunteer}" method="GET" class="form-container">
-
-        <label for="email1"><strong>Email</strong></label>
-        <input type="text" placeholder="Enter Email" name="email1" id="email1" th:field="*{volunteerEmail}" required>
-
-        <label for="psw1"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw1" id="psw1" th:field="*{volunteerPass}" required>
-
-        <button type="submit" class="btn">Login</button>
-        <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
       </form>
     </div>
 
-    <button class="open-button" onclick="openForm()">Sign Up</button>
 
     <div class="form-popup" id="myForm2">
-      <form action="/action_page.php" class="form-container" th:object="${volunteer}">
+      <form action="/action_page.php" class="form-container" th:object="${posts}">
 
-        <label for="email3"><strong>Email</strong></label>
-        <input type="text" placeholder="Enter Email" name="email3" id="email3" th:field="*{volunteerEmail}" required>
-
-        <label for="email4"><strong>Username</strong></label>
-        <input type="text" placeholder="Enter Email" name="email4" id="email4" th:field="*{volunteerUser}" required>
-
-        <label for="psw2"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw2" id="psw2" th:field="*{volunteerPass}" required>
-
-        <label for="psw3"><strong>Re-enter Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw3" id="psw3" th:field="*{volunteerPass}" required>
-
-        <button type="submit" class="btn" value="0">Create Account</button>
-        <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
       </form>
     </div>
   </div>
-
-  <h1>About Voluntier </h1>
-  <p>
-      "Voluntier” is a web application that allows for prospective individuals looking to get volunteer hours an opportunity to create a simple resume to find volunteering jobs near them.
-      It categorizes their specific traits and abilities towards a specific job and shows what local groups and organizations are looking for.
-      This helps organizations and individuals have a one stop shop for organizing said events and search for one another.
-      This idea is based around the need that most students actively are looking for volunteering opportunities to fulfil scholarship requirements and the ladder.
-  </p>
 </div>
 </body>
 </html>
