@@ -41,17 +41,20 @@
         <label for="applicantName"><b>Volunteer Name</b></label>
         <input type="text" placeholder="Enter Your Name" name="applicantName" id="applicantName" th:field="*{applicantName}" required>
 
-        <label for="companyLocation"><b>Company Location</b></label>
-        <input type="text" placeholder="Enter Company Location" name="companyLocation" id="companyLocation" th:field="*{companyLocation}" required>
+        <label for="applicantProf"><b>Volunteer Profession</b></label>
+        <input type="text" placeholder="What Job Are You Looking For?" name="applicationProf" id="applicationProf" th:field="*{applicationProf}" required>
         
-        <label for="companyDesc"><b>Company Description</b></label>
-        <input type="text" placeholder="Enter Description Of The Company" name="companyDesc" id="companyDesc" th:field="*{companyDesc}" required>
+        <label for="applicantCred"><b>Volunteer Credits</b></label>
+        <input type="text" placeholder="Enter Your College Degrees Or Other Credits" name="applicantCred" id="applicantCred" th:field="*{applicantCred}" required>
         
-        <label for="companyPhone"><b>Company Phone Number</b></label>
-        <input type="text" placeholder="Enter Phone Number Of The Company" name="companyPhone" id="companyPhone" th:field="*{companyPhone}" required>
+        <label for="applicantPhone"><b>Volunteer Phone Number</b></label>
+        <input type="text" placeholder="Enter Your Phone Number" name="companyPhone" id="companyPhone" th:field="*{companyPhone}" required>
         
-        <label for="companyEmail"><b>Company Email</b></label>
-        <input type="text" placeholder="Enter Email Address Of The Company" name="companyEmail" id="companyEmail" th:field="*{companyEmail}" required>
+        <label for="applicantEmail"><b>Volunteer Email</b></label>
+        <input type="text" placeholder="Enter Your Email Address" name="applicantEmail" id="applicantEmail" th:field="*{applicantEmail}" required>
+        
+        <label for="applicantDesc"><b>Volunteer Description</b></label>
+        <input type="text" placeholder="Give Some Information About Yourself" name="applicantDesc" id="applicantDesc" th:field="*{applicantDesc}" required>
 
         <button type="submit" class="btn">Post</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
