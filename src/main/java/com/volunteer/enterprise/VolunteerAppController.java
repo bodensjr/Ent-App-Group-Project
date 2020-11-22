@@ -20,6 +20,9 @@ public class VolunteerAppController {
 
     @Autowired
     ICompanyService companyService;
+    
+    @Autowired
+    IApplicantService applicantService;
 
     /**
      * GetMapping for root(/) endpoint
