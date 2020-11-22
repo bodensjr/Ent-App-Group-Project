@@ -36,4 +36,17 @@ class EnterpriseApplicationTests {
         assertEquals("Y@hoo_Suck$", company.getCompanyPass());
     }
 
+    @Test
+    void confirmCompanyGoogle_outputsCompanyGoogle() {
+        Company company = new Company();
+        company.setCompanyID(600673);
+        company.setCompanyEmail("owner@google.com");
+        company.setCompanyUser("Sergey Page");
+        company.setCompanyPass("Y@hoo_Suck$");
+        assertEquals(600673, company.getCompanyID());
+        assertEquals("owner@google.com", company.getCompanyEmail());
+        assertEquals("Sergey Page", company.getCompanyUser());
+        assertEquals("Y@hoo_Suck$", company.getCompanyPass());
+    }
+    
 }
