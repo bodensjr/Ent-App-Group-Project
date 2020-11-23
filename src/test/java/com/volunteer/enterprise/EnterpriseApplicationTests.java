@@ -24,29 +24,39 @@ class EnterpriseApplicationTests {
     }
 
     @Test
-    void confirmCompanyGoogle_outputsCompanyGoogle() {
+    void confirmCompanyAwesome_outputsCompanyAwesome() {
         Company company = new Company();
-        company.setCompanyID(600673);
-        company.setCompanyEmail("owner@google.com");
-        company.setCompanyUser("Sergey Page");
-        company.setCompanyPass("Y@hoo_Suck$");
-        assertEquals(600673, company.getCompanyID());
-        assertEquals("owner@google.com", company.getCompanyEmail());
-        assertEquals("Sergey Page", company.getCompanyUser());
-        assertEquals("Y@hoo_Suck$", company.getCompanyPass());
+        company.setcompanyID(600673);
+        company.setcompanyName("Awesome INC");
+        company.setcompanyLocation("Happyville, OH");
+        company.setcompanyDesc("An awesome company");
+        company.setcompanyPhone("867-5309");
+        company.setcompanyEmail("Awesome@cool.com");
+        assertEquals(600673, company.getcompanyID());
+        assertEquals("Awesome INC", company.getcompanyName());
+        assertEquals("Happyville, OH", company.getcompanyLocation());
+        assertEquals("An awesome company", company.getcompanyDesc());
+        assertEquals("867-5309", company.getcompanyPhone());
+        assertEquals("Awesome@cool.com", company.getcompanyEmail());
     }
 
     @Test
-    void confirmCompanyGoogle_outputsCompanyGoogle() {
-        Company company = new Company();
-        company.setCompanyID(600673);
-        company.setCompanyEmail("owner@google.com");
-        company.setCompanyUser("Sergey Page");
-        company.setCompanyPass("Y@hoo_Suck$");
-        assertEquals(600673, company.getCompanyID());
-        assertEquals("owner@google.com", company.getCompanyEmail());
-        assertEquals("Sergey Page", company.getCompanyUser());
-        assertEquals("Y@hoo_Suck$", company.getCompanyPass());
+    void confirmApplicantKrabs_outputsApplicantKrabs() {
+        Applicant applicant = new Applicant();
+        applicant.setapplicantID(6003473);
+        applicant.setapplicantName("Eugene Krabs");
+        applicant.setapplicantProf("Restaurant Owner");
+        applicant.setapplicantCred("Money, money, money!");
+        applicant.setapplicantPhone("472-6374");
+        applicant.setapplicantEmail("Money@krabs.com");
+        applicant.setapplicantDesc("Money, money, money, money, money!");
+        assertEquals(6003473, applicant.getapplicantID());
+        assertEquals("Eugene Krabs", applicant.getapplicantName());
+        assertEquals("Restaurant Owner", applicant.getapplicantProf());
+        assertEquals("Money, money, money!", applicant.getapplicantCred());
+        assertEquals("472-6374", applicant.getapplicantPhone());
+        assertEquals("Money@krabs.com", applicant.getapplicantEmail());
+        assertEquals("Money, money, money, money, money!", applicant.getapplicantDesc());
     }
     
 }
