@@ -3,7 +3,7 @@ package com.volunteer.enterprise.dto;
 import lombok.Data;
 
 public @Data class Applicant {
-    private int    applicationID;
+    private int    applicantID;
     private String applicantName;
     private String applicantProf;
     private String applicantCred;
@@ -13,7 +13,7 @@ public @Data class Applicant {
 
     public String toString() {
         return "Applicant - " +
-                " ID: " + applicationID +
+                " ID: " + applicantID +
                 " Name: " + applicantName +
                 " Type of Job: " + applicantProf +
                 " Credentials: " + applicantCred +
