@@ -33,7 +33,4 @@ public class CompanyDAOStub implements ICompanyDAO {
     public void delete(int id) {
         allCompanies.remove(id);
     }
-    
-    //get the values of the variables in Company to display in HTML
-    document.getElementById("company").innerHTML = fetchAll();
 }
