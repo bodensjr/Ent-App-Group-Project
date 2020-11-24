@@ -1,18 +1,18 @@
 package com.volunteer.enterprise.dao;
 
-import com.volunteer.enterprise.dto.Volunteer;
+import com.volunteer.enterprise.dto.Applicant;
 import java.util.List;
 
 
-public interface IVolunteerDAO {
-    Volunteer save(Volunteer volunteer) throws Exception;
+public interface IApplicantDAO {
+    Applicant save(Applicant applicant) throws Exception;
 
-    List<Volunteer> fetchAll();
+    List<Applicant> fetchAll();
     
-    //get the values of the variables in Company to display in HTML
-    document.getElementById("company").innerHTML = fetchAll();
+    //get the values of the variables in Applicant to display in HTML
+    document.getElementById("applicant").innerHTML = fetchAll();
 
-    Volunteer fetch(int id);
+    Applicant fetch(int id);
 
     void delete(int id);
 }
