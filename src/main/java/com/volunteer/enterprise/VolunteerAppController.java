@@ -54,14 +54,38 @@ public class VolunteerAppController {
     @GetMapping("/company")
     public String company(Model model){
         Company company = new Company();
-        company.setCompanyEmail("vertex@gmail.com");
-        company.setCompanyPass("Man");
-        company.setCompanyID(1);
-        company.setCompanyUser("Bat");
+        company.setcompanyID(1);
+        company.setcompanyName("Wayne Ent");
+        company.setcompanyLocation("Gotham City, USA");
+        company.setcompanyDesc("I am batman");
+        company.setcompanyPhone("465-2398");
+        company.setcompanyEmail("vertex@gmail.com");
 
         // Add newly created favorite to model so it can be displayed
         model.addAttribute(company);
         return "company";
+    }
+    
+        /**
+     * GetMapping for /applicant endpoint
+     * Create a applicant object and then display company form page
+     *
+     * @return applicant form page
+     */
+    @GetMapping("/applicant")
+    public String applicant(Model model){
+        Applicant applicant = new Applicant();
+        applicant.setapplicantID(2);
+        appicant.setapplicantName("Clark Kent");
+        appicant.setapplicantProf("Reporter");
+        appicant.setapplicantCred("I used to be superman");
+        appicant.setapplicantPhone("465-5698");
+        appicant.setapplicantEmail("super@man.com");
+        appicant.setapplicantDesc("I actually still am superman");
+
+        // Add newly created favorite to model so it can be displayed
+        model.addAttribute(applicant);
+        return "applicant";
     }
 
     /**
@@ -143,6 +167,25 @@ public class VolunteerAppController {
         model.addAttribute(company);
         return "company";
     }
+    
+    /**
+     * GetMapping for /saveApplicant endpoint
+     * Save a new company with details provided via HTTP query string
+     *
+     * @param company - a company with provided through HTTP query
+     * @return Company form page displaying newly saved company
+     */
+    @GetMapping("/saveApplicant")
+    public String saveApplicant(Applicant applicant, Model model){
+        try {
+            applicantService.save(Applicant);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //Add newly created volunteer to model so it can be displayed
+        model.addAttribute(applicant);
+        return "applicant";
+    }
 
     /**
      * GetMapping for /volunteers endpoint
@@ -158,11 +201,22 @@ public class VolunteerAppController {
     /**
      * GetMapping for /companies endpoint
      *
-     * @return all volunteers
+     * @return all companies
      */
     @GetMapping("/companies")
     @ResponseBody
     public List<Company> fetchAllCompanies() {
         return companyService.fetchAll();
+    }
+    
+        /**
+     * GetMapping for /applicants endpoint
+     *
+     * @return all applicants
+     */
+    @GetMapping("/applicants")
+    @ResponseBody
+    public List<Applicant> fetchAllApplicants() {
+        return applicantService.fetchAll();
     }
 }
