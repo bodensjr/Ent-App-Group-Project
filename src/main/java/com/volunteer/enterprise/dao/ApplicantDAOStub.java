@@ -11,28 +11,28 @@ import java.util.Map;
 
 
 @Repository
-public class VolunteerDAOStub implements IVolunteerDAO {
+public class ApplicantDAOStub implements IApplicantDAO {
 
-    Map<Integer, Volunteer> allVolunteers = new HashMap<>();
+    Map<Integer, Applicant> allApplicants = new HashMap<>();
 
     @Override
-    public Volunteer save(Volunteer volunteer) throws Exception {
-        allVolunteers.put(volunteer.getVolunteerID(),volunteer);
-        return volunteer;
+    public Applicant save(Applicant applicant) throws Exception {
+        allApplicants.put(applicant.getApplicantID(),applicant);
+        return applicant;
     }
     @Override
-    public List<Volunteer> fetchAll() {
-        List<Volunteer> returnVolunteers = new ArrayList(allVolunteers.values());
-        return returnVolunteers;
+    public List<Applicant> fetchAll() {
+        List<Applicant> returnApplicants = new ArrayList(allApplicants.values());
+        return returnApplicants;
     }
 
     @Override
-    public Volunteer fetch(int id) {
-        return allVolunteers.get(id);
+    public Applicant fetch(int id) {
+        return allApplicants.get(id);
     }
 
     @Override
     public void delete(int id) {
-        allVolunteers.remove(id);
+        allApplicants.remove(id);
     }
 }
