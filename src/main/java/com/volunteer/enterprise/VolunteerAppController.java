@@ -178,7 +178,7 @@ public class VolunteerAppController {
     @GetMapping("/saveApplicant")
     public String saveApplicant(Applicant applicant, Model model){
         try {
-            applicantService.save(Applicant);
+            applicantService.save(applicant);
         } catch (Exception e) {
             e.printStackTrace();
         }
