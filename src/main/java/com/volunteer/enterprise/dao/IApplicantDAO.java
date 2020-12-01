@@ -8,9 +8,6 @@ public interface IApplicantDAO {
     Applicant save(Applicant applicant) throws Exception;
 
     List<Applicant> fetchAll();
-    
-    //get the values of the variables in Applicant to display in HTML
-    document.getElementById("applicant").innerHTML = fetchAll();
 
     Applicant fetch(int id);
 
