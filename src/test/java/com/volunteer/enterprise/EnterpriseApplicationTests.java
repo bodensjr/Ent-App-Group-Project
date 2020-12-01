@@ -2,6 +2,7 @@ package com.volunteer.enterprise;
 
 import com.volunteer.enterprise.dto.Company;
 import com.volunteer.enterprise.dto.Volunteer;
+import com.volunteer.enterprise.dto.Applicant;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
