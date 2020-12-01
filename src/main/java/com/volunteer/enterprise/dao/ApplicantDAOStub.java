@@ -2,6 +2,7 @@
 package  com.volunteer.enterprise.dao;
 
 import com.volunteer.enterprise.dto.Volunteer;
+import com.volunteer.enterprise.dto.Applicant;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
