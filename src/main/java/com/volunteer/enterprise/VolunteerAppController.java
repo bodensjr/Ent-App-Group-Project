@@ -54,12 +54,12 @@ public class VolunteerAppController {
     @GetMapping("/company")
     public String company(Model model){
         Company company = new Company();
-        company.setcompanyID(1);
-        company.setcompanyName("Wayne Ent");
-        company.setcompanyLocation("Gotham City, USA");
-        company.setcompanyDesc("I am batman");
-        company.setcompanyPhone("465-2398");
-        company.setcompanyEmail("vertex@gmail.com");
+        company.setCompanyID(1);
+        company.setCompanyName("Wayne Ent");
+        company.setCompanyLocation("Gotham City, USA");
+        company.setCompanyDesc("I am batman");
+        company.setCompanyPhone("465-2398");
+        company.setCompanyEmail("vertex@gmail.com");
 
         // Add newly created favorite to model so it can be displayed
         model.addAttribute(company);
@@ -75,13 +75,13 @@ public class VolunteerAppController {
     @GetMapping("/applicant")
     public String applicant(Model model){
         Applicant applicant = new Applicant();
-        applicant.setapplicantID(2);
-        appicant.setapplicantName("Clark Kent");
-        appicant.setapplicantProf("Reporter");
-        appicant.setapplicantCred("I used to be superman");
-        appicant.setapplicantPhone("465-5698");
-        appicant.setapplicantEmail("super@man.com");
-        appicant.setapplicantDesc("I actually still am superman");
+        applicant.setApplicantID(2);
+        applicant.setApplicantName("Clark Kent");
+        applicant.setApplicantProf("Reporter");
+        applicant.setApplicantCred("I used to be superman");
+        applicant.setApplicantPhone("465-5698");
+        applicant.setApplicantEmail("super@man.com");
+        applicant.setApplicantDesc("I actually still am superman");
 
         // Add newly created favorite to model so it can be displayed
         model.addAttribute(applicant);
